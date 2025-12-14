@@ -1,4 +1,4 @@
-module github.com/HugoBlox/hugo-blox-builder/templates/blog
+module github.com/attajak/swift-atlas
 
 go 1.19
 
