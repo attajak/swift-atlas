@@ -21,12 +21,21 @@ hugo_stats.json
 # Auto-generated JS config
 **/assets/jsconfig.json
 
+# Go/Hugo Modules
+go.sum
+
 # ============================================================================
 # Node.js & Package Managers
 # ============================================================================
 
 # Dependencies
 node_modules/
+
+# Package Managers
+package-lock.json
+yarn.log
+pnpm-lock.yaml
+pnpm-workspace.yaml
 
 # ============================================================================
 # Environment & Configuration
