@@ -33,7 +33,7 @@ node_modules/
 
 # Package Managers
 package-lock.json
-yarn.log
+yarn.lock
 pnpm-lock.yaml
 pnpm-workspace.yaml
 

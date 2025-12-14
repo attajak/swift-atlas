@@ -7,6 +7,18 @@ on:
   # Trigger the workflow every time you push to the `main` branch
   push:
     branches: ['main']
+    paths:
+      - '.github/workflows/**'
+      - 'assets/**'
+      - 'config/**'
+      - 'content/**'
+      - 'data/**'
+      - 'i18n/**'
+      - 'layouts/**'
+      - 'static/**'
+      - 'themes/**'
+      - 'go.mod'
+
   # Allows you to run this workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 
@@ -23,7 +35,7 @@ concurrency:
 jobs:
   # Build website
   build:
-    if: github.repository_owner != 'HugoBlox'
+    if: github.repository_owner != 'attajak' # 'HugoBlox'
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -108,7 +120,7 @@ jobs:
 
   # Deploy website to GitHub Pages hosting
   deploy:
-    if: github.repository_owner != 'HugoBlox'
+    if: github.repository_owner != 'attajak' # 'HugoBlox'
     needs: build
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
