@@ -5,8 +5,11 @@
   "packageManager": "pnpm@10.14.0",
   "description": "Blog starter template for Hugo Blox with Tailwind CSS v4",
   "scripts": {
-    "dev": "hugo server -D -E -F -M -N -O --disableFastRender --logLevel info --baseURL http://localhost:1313",
-    "build": "hugo --minify"
+    "create": "hugo new content",
+    "dev": "hugo server -D -E -F -M -N -O -w --gc --minify --disableFastRender --logLevel info --bind 0.0.0.0 --baseURL http://localhost:1313",
+    "build": "hugo --gc --minify --logLevel info",
+    "update": "hugo mod get -u && hugo mod tidy && hugo mod graph",
+    "clean": "rm -rf .hugo_build.lock resouces public"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
